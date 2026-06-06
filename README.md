@@ -33,12 +33,19 @@ cd TrueConf
 ```
 
 ### **Set up virtual environment**
+Windows/Linux/Mac
 ```bash
 python -m venv venv
-venv\Scripts\activate  # Windows
-source venv/bin/activate  # Linux/Mac
 ```
 
+```bash
+venv\Scripts\activate  # Windows
+```
+
+```bash
+source venv/bin/activate  # Linux/Mac
+```
+Anaconda
 ```Anaconda
 conda create --name Lada 
 source activate Lada
@@ -154,7 +161,6 @@ build\exe.win-amd64-3.11\Trueconf.exe
 | Issue | Solution |
 |-------|----------|
 | **Database not found** | Run `python DBUPDATE.py` to initialize |
-| **Images not loading** | Check `lada/pictures/` path, verify Unicode normalization |
 | **API request fails** | Enable proxy in Settings, check internet connection |
 | **Map not loading** | Verify Yandex Maps API key, check internet connection |
 | **Auto.ru blocked** | Click "Открыть в браузере" to open in system browser |
