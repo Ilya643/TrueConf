@@ -1,6 +1,9 @@
 # LADA Car Configurator
 
-![Main menu](pictures/main_menu.png)
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+![PyQt](https://img.shields.io/badge/PyQt-5.15-red)
+![SQLite](https://img.shields.io/badge/SQLite-3-green)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 Desktop application for configuring LADA vehicles with real-time price calculation, dealer map integration, and secondary market analog search.
 
@@ -62,12 +65,16 @@ python Trueconf.py
 ### **Configuration Workflow**
 
 1. **Select Brand**: Choose LADA from the main menu
+![Main menu](pictures/main_menu.png)
 2. **Select Model**: Granta, Vesta, Largus, Niva, XRAY, Aura, Priora
+![Main menu](pictures/model.png)
 3. **Select Body**: Sedan, Hatchback, Universal, SUV, etc.
 4. **Select Complectation**: Standard, Standard Plus, Classic, Comfort, Luxe
+![Main menu](pictures/complectation.png)
 5. **Select Engine**: View available engine options with prices
 6. **Select Options**: Add optional equipment (checkboxes with visual confirmation ✅)
 7. **Select Color**: Choose from available colors with price differences
+![Main menu](pictures/review.png)
 8. **Review**: View total price with breakdown by category
 
 ### **Additional Features**
@@ -142,7 +149,7 @@ build\exe.win-amd64-3.11\Trueconf.exe
 | `cooldown` | `30 min` | Minimum time between updates |
 
 
-## 🐛 Troubleshooting
+## 🧩 Troubleshooting
 
 | Issue | Solution |
 |-------|----------|
