@@ -1,6 +1,6 @@
 # LADA Car Configurator
 
-![Main menu](pictures\main_menu.png)
+![Main menu](pictures/main_menu.png)
 
 Desktop application for configuring LADA vehicles with real-time price calculation, dealer map integration, and secondary market analog search.
 
