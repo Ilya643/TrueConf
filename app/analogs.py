@@ -78,7 +78,7 @@ class AnalogSearch(QWidget):
     def _init_ui(self) -> None:
         """Строит интерфейс: панель инструментов + встроенный браузер."""
         self.setWindowTitle("🔍 Поиск аналогов на Auto.ru")
-        self.showFullScreen()
+        self.showMaximized()
 
         layout = QVBoxLayout(self)
         layout.setContentsMargins(5, 5, 5, 5)

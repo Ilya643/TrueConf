@@ -115,7 +115,6 @@ class DealersMap(QWidget):
     def _init_ui(self) -> None:
         """Строит интерфейс: строка поиска + веб-карта."""
         self.setWindowTitle("Карта дилеров LADA")
-        self.resize(1024, 680)
 
         layout = QVBoxLayout(self)
         layout.setContentsMargins(5, 5, 5, 5)
@@ -146,7 +145,7 @@ class DealersMap(QWidget):
 
         # Загружаем карту с начальным городом
         self._load_map(self.city)
-        self.show()
+        self.showMaximized()
 
     def _search(self) -> None:
         """Читает город из поля ввода и перезагружает карту."""
