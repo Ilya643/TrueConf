@@ -83,7 +83,7 @@ class AnalogSearch(QWidget):
         layout = QVBoxLayout(self)
         layout.setContentsMargins(5, 5, 5, 5)
 
-        # --- Верхняя панель с информацией ---
+        # Верхняя панель с информацией
         top = QHBoxLayout()
         info = QLabel(f"🚗 {self.model} {self.body} • от {price_proc(self.base_price)} ₽")
         info.setFont(QFont("Arial", 12))
@@ -100,11 +100,11 @@ class AnalogSearch(QWidget):
 
         layout.addLayout(top)
 
-        # --- Встроенный браузер ---
+        # Встроенный браузер PyQT
         self.browser = QWebEngineView()
         layout.addWidget(self.browser, 1)
 
-        # --- Строка состояния ---
+        # Строка состояния
         self.status = QLabel("Загрузка...")
         self.status.setAlignment(Qt.AlignCenter)
         self.status.setStyleSheet("background: #f0f0f0; padding: 4px; color: #555;")

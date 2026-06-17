@@ -47,6 +47,7 @@ class Parsing(ABC):
         self.base_dir: str = os.path.abspath(os.path.dirname(__file__))
         self.last_rel_path: str | None = None
 
+    # Заглушки
     @abstractmethod
     def get_model(self, *args, **kwargs) -> dict:
         """Возвращает словарь моделей {название: (цена, путь_к_фото)}."""

@@ -120,7 +120,7 @@ class DealersMap(QWidget):
         layout.setContentsMargins(5, 5, 5, 5)
         layout.setSpacing(5)
 
-        # --- Строка поиска города ---
+        # Строка поиска города
         search_row = QHBoxLayout()
         search_row.setSpacing(8)
 
@@ -139,7 +139,7 @@ class DealersMap(QWidget):
 
         layout.addLayout(search_row)
 
-        # --- Встроенная карта ---
+        # Встроенная карта
         self.web_view = QWebEngineView()
         layout.addWidget(self.web_view, 1)
 
