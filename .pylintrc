@@ -1,7 +1,0 @@
-[MASTER]
-extension-pkg-whitelist=PyQt5
-
-[TYPECHECK]
-# Игнорировать ошибки о missing members для PyQt5
-ignored-modules=PyQt5,PyQt5.QtWidgets,PyQt5.QtCore,PyQt5.QtGui,PyQt5.QtWebEngineWidgets
-generated-members=QApplication,QMainWindow,QWidget,QVBoxLayout,QHBoxLayout,QFormLayout,QLineEdit,QComboBox,QPushButton,QTabWidget,QScrollArea,QLabel,QToolButton,QStatusBar,QWebEngineView,QWebEngineSettings,QWebEngineProfile,QNetworkCookie,QRegExp,QRegExpValidator

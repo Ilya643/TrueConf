@@ -14,7 +14,7 @@
 
 import sys
 
-from PyQt5.QtWidgets import QApplication
+import PyQt5.QtWidgets
 
 from app.main_window import MainWindow
 
@@ -25,7 +25,7 @@ def main() -> int:
     Returns:
         Код завершения процесса (0 — успех, ненулевой — ошибка).
     """
-    app = QApplication(sys.argv)
+    app = PyQt5.QtWidgets.QApplication(sys.argv)
     window = MainWindow()
     window.show()
     return app.exec_()
