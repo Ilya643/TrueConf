@@ -4,3 +4,4 @@ venv/
 .env
 *.db
 lada/
+.DS_Store
