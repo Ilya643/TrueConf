@@ -5,3 +5,4 @@ venv/
 *.db
 lada/
 .DS_Store
+.spyproject
