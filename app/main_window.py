@@ -85,7 +85,7 @@ class MainWindow(QWidget):
         """
         painter = QPainter(self)
         pixmap = QPixmap(
-            "./36731-predstavitelskij_avtomobil-koleso-audi-sportkar-doroga-1920x1080.jpg"
+            "ui/36731-predstavitelskij_avtomobil-koleso-audi-sportkar-doroga-1920x1080.jpg"
         )
         painter.drawPixmap(self.rect(), pixmap)
 
