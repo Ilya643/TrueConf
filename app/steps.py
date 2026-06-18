@@ -72,7 +72,7 @@ class Body(Window):
         self.initUI()
 
     def initUI(self) -> None:
-        """Задаёт хлебные крошки и загружает кузова."""
+        """Загружает кузова."""
         super().initUI()
         self.pushButton.clicked.connect(self.main_window)
         self.pushButton_2.setStyleSheet("background-color: #A92E18;")
@@ -120,7 +120,7 @@ class Complectation(Window):
         self.initUI()
 
     def initUI(self) -> None:
-        """Задаёт хлебные крошки и загружает комплектации."""
+        """Загружает комплектации."""
         super().initUI()
         self.pushButton.clicked.connect(self.main_window)
         self.pushButton_2.setStyleSheet("background-color: #A92E18;")

@@ -48,7 +48,7 @@ class Engine(Window):
         self.initUI()
 
     def initUI(self) -> None:
-        """Задаёт хлебные крошки и загружает двигатели."""
+        """Загружает двигатели."""
         super().initUI()
         self.pushButton.clicked.connect(self.main_window)
         crumbs = [
@@ -116,7 +116,7 @@ class Options(Window):
         self.initUI()
 
     def initUI(self) -> None:
-        """Задаёт хлебные крошки, кнопку «Далее» и загружает опции."""
+        """Задаёт кнопку «Далее» и загружает опции."""
         super().initUI()
         self.pushButton.clicked.connect(self.main_window)
         crumbs = [
@@ -213,7 +213,7 @@ class Color(Window):
         self.initUI()
 
     def initUI(self) -> None:
-        """Задаёт хлебные крошки и загружает цвета."""
+        """Загружает цвета."""
         super().initUI()
         self.pushButton.clicked.connect(self.main_window)
         crumbs = [
