@@ -25,10 +25,7 @@ import app.utils as state
 from app.utils import price_proc
 
 
-# ---------------------------------------------------------------------------
 # Вспомогательная функция масштабирования изображений
-# ---------------------------------------------------------------------------
-
 def _scale_pixmap(pixmap: QPixmap, max_w: int = 800, max_h: int = 400) -> QPixmap:
     """Масштабирует QPixmap с сохранением пропорций.
 
@@ -95,7 +92,7 @@ class Window(QWidget):
             hbox = QHBoxLayout()
             hbox.addStretch()
 
-            # --- Изображение ---
+            # Изображение
             img_label = QLabel(self)
             raw_path = row[s[2]]
             if raw_path:
@@ -107,7 +104,7 @@ class Window(QWidget):
             hbox.addWidget(img_label)
             hbox.addSpacing(20)
 
-            # --- Информационный блок (кнопка + детали) ---
+            # Информационный блок (кнопка + детали)
             info_layout = QVBoxLayout()
             info_layout.addStretch()
 
