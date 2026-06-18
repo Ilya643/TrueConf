@@ -15,8 +15,13 @@ from PyQt5.QtWidgets import (
 )
 from PyQt5.QtWebEngineWidgets import QWebEngineView
 
+import os
+from dotenv import load_dotenv
+
+
 # Ключ API Яндекс.Карт (ограниченный, только для разработки)
-_YANDEX_API_KEY = "7fbf4c89-a94f-4112-97d3-888bda8facb5"
+load_dotenv()
+_YANDEX_API_KEY = os.getenv('YA_API_KEY')
 
 # HTML-шаблон карты с плейсхолдерами {city} и {api_key}
 _MAP_HTML_TEMPLATE = """\
@@ -109,6 +114,7 @@ class DealersMap(QWidget):
     def __init__(self, city: str = "Москва") -> None:
         """Инициализирует виджет и запускает поиск для города по умолчанию."""
         super().__init__()
+        self.showMaximized()
         self.city = city
         self._init_ui()
 
@@ -120,7 +126,7 @@ class DealersMap(QWidget):
         layout.setContentsMargins(5, 5, 5, 5)
         layout.setSpacing(5)
 
-        # Строка поиска города
+        # --- Строка поиска города ---
         search_row = QHBoxLayout()
         search_row.setSpacing(8)
 
@@ -139,13 +145,13 @@ class DealersMap(QWidget):
 
         layout.addLayout(search_row)
 
-        # Встроенная карта
+        # --- Встроенная карта ---
         self.web_view = QWebEngineView()
         layout.addWidget(self.web_view, 1)
 
         # Загружаем карту с начальным городом
         self._load_map(self.city)
-        self.showMaximized()
+        self.show()
 
     def _search(self) -> None:
         """Читает город из поля ввода и перезагружает карту."""

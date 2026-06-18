@@ -16,6 +16,9 @@ import sys
 
 import PyQt5.QtWidgets
 
+from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import QApplication
+
 from app.main_window import MainWindow
 
 
@@ -25,6 +28,7 @@ def main() -> int:
     Returns:
         Код завершения процесса (0 — успех, ненулевой — ошибка).
     """
+    QApplication.setAttribute(Qt.AA_ShareOpenGLContexts, True)
     app = PyQt5.QtWidgets.QApplication(sys.argv)
     window = MainWindow()
     window.show()
