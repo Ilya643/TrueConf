@@ -3,8 +3,8 @@
 
 Делегирует работу модулям пакета ``app``::
 
-    app.lada_parser  — парсер API lada.ru и обновление SQLite.
-    app.db_manager   — создание и заполнение таблиц БД.
+    app.lada_parser  - парсер API lada.ru и обновление SQLite.
+    app.db_manager   - создание и заполнение таблиц БД.
 
 Прямой запуск::
 
@@ -24,7 +24,7 @@ def all_update(proxy=False, use_headers: bool = True) -> None:
     """Запускает полное обновление данных LADA.
 
     Args:
-        proxy: Настройки прокси (False — без прокси, str или dict).
+        proxy: Настройки прокси (False - без прокси, str или dict).
         use_headers: Отправлять ли HTTP-заголовки браузера.
     """
     parser = ParsingLada(

@@ -81,7 +81,7 @@ class Window(QWidget):
             result: Список кортежей из базы данных (строки SELECT).
             s: Кортеж из трёх индексов ``(name_idx, price_idx, img_idx)``
                для доступа к соответствующим полям строки.
-            w: Тип текущего шага — ``'model'``, ``'body'``,
+            w: Тип текущего шага - ``'model'``, ``'body'``,
                ``'complectation'``, ``'engine'``, ``'options'`` или ``'color'``.
         """
         container = QWidget()

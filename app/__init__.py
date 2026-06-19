@@ -1,8 +1,8 @@
 """
-Пакет ``app`` — основная логика приложения LADA Configurator.
+Пакет ``app`` - основная логика приложения LADA Configurator.
 
 Структура пакета
-----------------
+
 utils.py
     Глобальное состояние сессии (db, brand, timeup, compl_inf)
     и вспомогательная функция ``price_proc``.
@@ -12,9 +12,9 @@ base_window.py
     и навигации.
 
 main_window.py
-    ``MainWindow`` — главное меню.
-    ``Settings`` — окно обновления базы данных.
-    ``Load`` — заглушка ожидания.
+    ``MainWindow`` - главное меню.
+    ``Settings`` - окно обновления базы данных.
+    ``Load`` - заглушка ожидания.
 
 steps.py
     Шаги конфигуратора:
@@ -22,9 +22,9 @@ steps.py
     → ``Options`` → ``Color``.
 
 summary.py
-    ``InTotal`` — итоговое окно с ценой и детализацией.
-    ``AnalogSearch`` — поиск аналогов на Auto.ru.
+    ``InTotal`` - итоговое окно с ценой и детализацией.
+    ``AnalogSearch`` - поиск аналогов на Auto.ru.
 
 dealers.py
-    ``DealersMap`` — карта официальных дилеров LADA.
+    ``DealersMap`` - карта официальных дилеров LADA.
 """

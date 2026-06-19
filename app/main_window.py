@@ -3,10 +3,10 @@
 
 Модуль содержит классы:
 
-* ``MainWindow`` — стартовый экран с кнопками «Конфигуратор»,
+* ``MainWindow`` - стартовый экран с кнопками «Конфигуратор»,
   «Настройки», «Выход» и выбором бренда.
-* ``Settings``   — окно обновления базы данных с настройками прокси.
-* ``Load``       — заглушка «Ожидайте загрузки...».
+* ``Settings``   - окно обновления базы данных с настройками прокси.
+* ``Load``       - заглушка «Ожидайте загрузки...».
 """
 
 import time
@@ -40,16 +40,16 @@ class MainWindow(QWidget):
         """Настраивает заголовок, подключает сигналы кнопок и заполняет ComboBox."""
         self.setWindowTitle("Конфигуратор LADA")
 
-        # Кнопка «Конфигуратор» — начало процесса выбора
+        # Кнопка «Конфигуратор» - начало процесса выбора
         self.pushButton.clicked.connect(self._show_configurator)
 
-        # Кнопка «Выход» — завершает приложение
+        # Кнопка «Выход» - завершает приложение
         self.pushButton_2.clicked.connect(self.close)
 
-        # Кнопка «Настройки» — открывает окно обновления БД
+        # Кнопка «Настройки» - открывает окно обновления БД
         self.pushButton_3.clicked.connect(self._show_settings)
 
-        # Кнопка разработчика — открывает Telegram
+        # Кнопка разработчика - открывает Telegram
         self.pushButton_4.clicked.connect(
             lambda: webbrowser.open("https://t.me/Lil_soupchik")
         )
@@ -113,7 +113,7 @@ class Settings(QWidget):
         # Кнопка «Обновить БД»
         self.pushButton_3.clicked.connect(self._update_db)
 
-        # Кнопка «Назад» — возврат в главное меню
+        # Кнопка «Назад» - возврат в главное меню
         self.pushButton_4.clicked.connect(self._back)
 
     def _update_db(self) -> None:
@@ -163,5 +163,5 @@ class Load(QWidget):
         super().__init__()
         uic.loadUi("./ui/load.ui", self)
         self.setWindowTitle("Ожидайте окончания загрузки")
-        # Минимальная высота — окно служит лишь индикатором
+        # Минимальная высота - окно служит лишь индикатором
         self.setFixedSize(400, 1)

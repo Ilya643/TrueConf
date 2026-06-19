@@ -26,7 +26,7 @@ def main() -> int:
     """Инициализирует QApplication и запускает главное окно.
 
     Returns:
-        Код завершения процесса (0 — успех, ненулевой — ошибка).
+        Код завершения процесса (0 - успех, ненулевой - ошибка).
     """
     QApplication.setAttribute(Qt.AA_ShareOpenGLContexts, True)
     app = PyQt5.QtWidgets.QApplication(sys.argv)

@@ -82,7 +82,7 @@ _MAP_HTML_TEMPLATE = """\
             searchControl.search('автосалон LADA {city}');
             map.controls.add(searchControl);
 
-            // Скрываем поле ввода встроенного поиска Яндекс.Карт —
+            // Скрываем поле ввода встроенного поиска Яндекс.Карт -
             // пользователь вводит город в наш собственный виджет выше
             setTimeout(function() {{
                 var input = document.querySelector(
@@ -126,7 +126,7 @@ class DealersMap(QWidget):
         layout.setContentsMargins(5, 5, 5, 5)
         layout.setSpacing(5)
 
-        # --- Строка поиска города ---
+        # Строка поиска города
         search_row = QHBoxLayout()
         search_row.setSpacing(8)
 
@@ -145,7 +145,7 @@ class DealersMap(QWidget):
 
         layout.addLayout(search_row)
 
-        # --- Встроенная карта ---
+        # Встроенная карта
         self.web_view = QWebEngineView()
         layout.addWidget(self.web_view, 1)
 
