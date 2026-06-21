@@ -142,10 +142,16 @@ class UpdateDB:
             cur: Курсор SQLite.
             equipment: {«Мод*Куз*Компл*Опция»: (заголовок, цена, фото)}.
         """
+        seen = set()  # Отслеживаем уже вставленные ключи
         cur.execute("DELETE FROM EQUIPMENT")
         for key, (title, price, img) in equipment.items():
             parts = key.split("*")
             if len(parts) >= 4:
+                # Уникальный ключ для проверки дубликатов
+                unique_key = (parts[0], parts[1], parts[2], parts[3])
+                if unique_key in seen:
+                    continue  # Пропускаем дубликат
+                seen.add(unique_key)
                 output = "*".join(title) if isinstance(title, list) else title
                 cur.execute("INSERT INTO EQUIPMENT VALUES (?,?,?,?,?,?,?)",
                             (parts[0], parts[1], parts[2], parts[3], output, price, self._norm(img)))
