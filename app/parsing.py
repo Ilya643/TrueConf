@@ -44,7 +44,9 @@ class Parsing(ABC):
         }
         self.proxies: dict | None = None
         self.session: requests.Session | None = None
-        self.base_dir: str = os.path.abspath(os.path.dirname(__file__))
+        self.base_dir: str = os.path.abspath(
+            os.path.dirname(os.path.dirname(__file__))
+        )
         self.last_rel_path: str | None = None
 
     # Заглушки
